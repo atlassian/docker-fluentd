@@ -12,7 +12,7 @@ RUN apt-get update -y && apt-get install -y \
 
 RUN gem install fluentd && gem install fluent-plugin-ec2-metadata && \
 			gem install fluent-plugin-hostname && gem install fluent-plugin-retag  && \
-			gem install fluent-plugin-kinesis
+			gem install fluent-plugin-kinesis && gem install fluent-plugin-elasticsearch
 
 RUN mkdir -p /var/log/fluent
 
