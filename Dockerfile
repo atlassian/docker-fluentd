@@ -18,4 +18,4 @@ RUN mkdir -p /var/log/fluent
 
 EXPOSE 24224
 
-CMD fluentd -c /etc/fluent/fluentd.conf 
+CMD ["fluentd","-c","/etc/fluent/fluentd.conf"]
