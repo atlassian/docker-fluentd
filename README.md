@@ -53,3 +53,10 @@ Mount the volumes where your logs are if needed and the path to the fluentd conf
     docker run -p 24224 -v /var/log:/fluentd/log -v `pwd`:/etc/fluent \
 			-e AWS_ACCESS_KEY_ID=replaceme -e AWS_SECRET_ACCESS_KEY=replaceme \
 			docker.atlassian.io/laas/fluentd:latest
+
+# Release
+First registered a Docker Hub account and ask one of the existing member to add you into the atlassianlabs team. Then you can run the following command to release a new version:
+
+```
+make release tag=<the new version number>
+```
