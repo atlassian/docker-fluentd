@@ -10,10 +10,8 @@ RUN apt-get update -y && apt-get install -y \
 			build-essential \
 			zlib1g-dev
 
-RUN gem install fluentd && gem install fluent-plugin-ec2-metadata && \
-			gem install fluent-plugin-hostname && gem install fluent-plugin-retag  && \
-			gem install fluent-plugin-kinesis && gem install fluent-plugin-elasticsearch && \
-			gem install fluent-plugin-record-modifier
+RUN gem install fluentd
+RUN fluent-gem install fluent-plugin-ec2-metadata fluent-plugin-hostname fluent-plugin-retag fluent-plugin-kinesis fluent-plugin-elasticsearch fluent-plugin-record-modifier fluent-plugin-multi-format-parser
 
 RUN mkdir -p /var/log/fluent
 
