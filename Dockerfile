@@ -21,4 +21,6 @@ RUN mkdir -p /var/log/fluent
 
 EXPOSE 24224
 
-CMD ["fluentd","-c","/etc/fluent/fluentd.conf"]
+# umask 0000 is a hack so that sockets created by the container
+# are writable by everyone.
+CMD ["sh","-c","umask 0000 && exec fluentd -c /etc/fluent/fluentd.conf"]
