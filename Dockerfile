@@ -2,7 +2,6 @@ FROM ruby:2.2.2-slim
 
 MAINTAINER Micros <micros@atlassian.com>
 
-RUN ulimit -n 65536
 RUN apt-get update -y && apt-get install -yy \
       build-essential \
       zlib1g-dev \
