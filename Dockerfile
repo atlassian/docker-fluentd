@@ -18,9 +18,12 @@ RUN fluent-gem install \
 
 RUN mkdir -p /var/log/fluent
 
-EXPOSE 24220 # standard debug port
-EXPOSE 24224 # standard in_forward port
-EXPOSE 24230 # standard monitor port
+# monitor port
+EXPOSE 24220
+# forward port
+EXPOSE 24224
+# debug port
+EXPOSE 24230
 
 ENV LD_PRELOAD "/usr/lib/x86_64-linux-gnu/libjemalloc.so.1"
 CMD ["fluentd", "-c", "/etc/fluent/fluentd.conf"]
