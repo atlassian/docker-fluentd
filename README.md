@@ -16,6 +16,7 @@ The following plugins are installed in the docker image:
 1. fluent-plugin-hostname
 1. fluent-plugin-retag
 1. fluent-plugin-kinesis
+1. fluent-plugin-kinesis-aggregation
 1. fluent-plugin-elasticsearch
 1. fluent-plugin-record-modifier
 1. fluent-plugin-multi-format-parser
