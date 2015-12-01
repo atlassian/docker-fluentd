@@ -1,4 +1,4 @@
-FROM ruby:2.2.2-slim
+FROM ruby:2.2.3-slim
 
 MAINTAINER Micros <micros@atlassian.com>
 
