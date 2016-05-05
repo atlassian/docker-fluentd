@@ -20,6 +20,7 @@ The following plugins are installed in the docker image:
 1. fluent-plugin-elasticsearch
 1. fluent-plugin-record-modifier
 1. fluent-plugin-multi-format-parser
+1. fluent-plugin-concat
 
 Here is an example configuration to use them. Note that this uses
 the old 'match/retag' approach; ideally you should use filter plugins
