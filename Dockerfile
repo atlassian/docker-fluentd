@@ -5,7 +5,9 @@ MAINTAINER Micros <micros@atlassian.com>
 RUN apt-get update -y && apt-get install -yy \
       build-essential \
       zlib1g-dev \
-      libjemalloc1
+      libjemalloc1 && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 COPY .gemrc /root/
 
