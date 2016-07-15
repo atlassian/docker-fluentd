@@ -21,7 +21,8 @@ RUN fluent-gem install \
     fluent-plugin-record-modifier:0.4.1 \
     fluent-plugin-multi-format-parser:0.0.2 \
     fluent-plugin-kinesis-aggregation:0.2.2 \
-    fluent-plugin-concat:0.4.0
+    fluent-plugin-concat:0.4.0 \
+    fluent-plugin-statsd-event:0.1.0
 
 RUN mkdir -p /var/log/fluent
 
