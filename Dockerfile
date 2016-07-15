@@ -11,7 +11,11 @@ RUN apt-get update -y && apt-get install -yy \
 
 COPY .gemrc /root/
 
-RUN gem install fluentd:0.12.23
+# Temporary pin google-protobuf to 3.0.0.alpha.4.0
+# There are some concerns on the performance of the latest version
+RUN gem install fluentd:0.12.23 && \
+    gem install google-protobuf -v 3.0.0.alpha.4.0 --pre
+
 RUN fluent-gem install \
     fluent-plugin-ec2-metadata:0.0.9 \
     fluent-plugin-hostname:0.0.2 \
