@@ -22,7 +22,8 @@ RUN apt-get update -y && apt-get install -yy \
       fluent-plugin-multi-format-parser:0.0.2 \
       fluent-plugin-kinesis-aggregation:0.2.2 \
       fluent-plugin-concat:0.4.0 \
-      fluent-plugin-statsd-event:0.1.1 && \
+      fluent-plugin-statsd-event:0.1.1 \
+      fluent-plugin-rewrite-tag-filter:1.5.6 && \
     apt-get purge -y build-essential && \
     apt-get autoremove -y && \
     apt-get clean && \
