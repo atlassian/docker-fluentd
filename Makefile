@@ -15,8 +15,8 @@ help: ### Dumps out all the target lines with suffixed comments
 		| column -t -s'|||'
 
 build: ### Builds a local docker image passing in the git information in as a label
-ifndef $(tag)
-	@echo "Specify the image tag on the command line with\n\tmake build tag=1.0.0"
+ifndef tag
+	@echo "No value found for tag. Specify the image tag on the command line with\n\tmake build tag=1.0.0"
 	@exit 1
 endif
 	docker build -t ${IMAGE_REFERENCE} \
@@ -25,6 +25,6 @@ endif
 		.
 
 release: build ### Pushes the locally build docker image to the hub.docker.com registry
-	git tag ${TAG}
+	git tag $(tag)
 	docker push ${IMAGE_REFERENCE} latest
 
