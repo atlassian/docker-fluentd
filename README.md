@@ -60,6 +60,12 @@ variables:
             -v /var/log:/fluentd/log -v `pwd`:/etc/fluent \
             atlassianlabs/fluentd:0.4.0
 
+# Build
+Testing changes locally
+```
+make build
+```
+
 # Release
 First register a Docker Hub account and ask one of the existing member to add you into the atlassianlabs team. Then you can run the following command to release a new version:
 
